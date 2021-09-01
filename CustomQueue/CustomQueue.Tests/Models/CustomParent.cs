@@ -1,6 +1,6 @@
-﻿namespace CustomQueue.Tests.Objects
+﻿namespace CustomQueue.Tests.Models
 {
-    public class Parent
+    public class CustomParent
     {
         public string Name { get; set; }
         public CustomQueue Queue { get; set; }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CustomQueue.Tests.Objects
+namespace CustomQueue.Tests.Models
 {
     public class CustomQueue
     {

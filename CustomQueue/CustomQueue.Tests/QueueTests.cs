@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using CS = CustomQueue.Tests.Objects;
+using CS = CustomQueue.Tests.Models;
 
 namespace CustomQueue.Tests
 {
