@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace CustomQueue.Tests.Models
+namespace CustomQueue.Models
 {
     public class OGParent
     {
