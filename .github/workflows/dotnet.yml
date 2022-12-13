@@ -33,14 +33,14 @@ jobs:
       with:
         dotnet-version: 7.0.x
     - name: Test
-      run: dotnet test CustomQueue/CustomQueue.Tests/CustomQueue.Tests.csproj -e:CollectCoverage=true -e:CoverletOutput=TestResults/ -e:CoverletOutputFormat=lcov
+      run: dotnet test src/CustomQueue.Tests/CustomQueue.Tests.csproj -e:CollectCoverage=true -e:CoverletOutput=TestResults/ -e:CoverletOutputFormat=lcov
     - name: Publish coverage report to coveralls.io
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        path-to-lcov: CustomQueue/CustomQueue.Tests/TestResults/coverage.info 
+        path-to-lcov: src/CustomQueue.Tests/TestResults/coverage.info 
     - name: publish 
-      run: dotnet publish CustomQueue/CustomQueue/CustomQueue.csproj --configuration Release --output ${{ github.workspace }}/library -p:Version=${{ steps.gitversion.outputs.SemVer }}
+      run: dotnet publish src/CustomQueue/CustomQueue.csproj --configuration Release --output ${{ github.workspace }}/library -p:Version=${{ steps.gitversion.outputs.SemVer }}
     - name: Publish web Artifact
       uses: actions/upload-artifact@v3
       with:
@@ -89,8 +89,8 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"samsmithnz_CustomQueue" /o:"samsmithnz-github" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build CustomQueue/CustomQueue/CustomQueue.csproj
-          dotnet build CustomQueue/CustomQueue.Tests/CustomQueue.Tests.csproj
+          dotnet build src/CustomQueue/CustomQueue.csproj
+          dotnet build src/CustomQueue.Tests/CustomQueue.Tests.csproj
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
    
   release:
