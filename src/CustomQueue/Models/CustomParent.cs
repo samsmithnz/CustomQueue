@@ -1,4 +1,4 @@
-﻿namespace CustomQueue.Tests.Models
+﻿namespace CustomQueue.Models
 {
     public class CustomParent
     {

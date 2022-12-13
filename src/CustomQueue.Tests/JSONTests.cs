@@ -1,9 +1,8 @@
-using CustomQueue.Tests.Models;
+using CustomQueue.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
-using System.Collections;
 using System.Collections.Generic;
-using CS = CustomQueue.Tests.Models;
+using CS = CustomQueue.Models;
 
 namespace CustomQueue.Tests
 {
