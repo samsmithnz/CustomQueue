@@ -42,7 +42,7 @@ jobs:
     - name: publish 
       run: dotnet publish src/CustomQueue/CustomQueue.csproj --configuration Release --output ${{ github.workspace }}/library -p:Version=${{ steps.gitversion.outputs.SemVer }}
     - name: Publish web Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: web
         path: ${{ github.workspace }}/library
