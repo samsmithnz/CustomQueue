@@ -1,6 +1,6 @@
 # CustomQueue
 
-Short experiment to recreate a custom queue collection in C#, (equivalent to `Queue<T>`), to enable me the ability to add custom logic to the dequeue function
+CustomQueue is an experimental C# library that implements a custom queue collection, similar to the built-in `Queue<T>`, designed for extending queue behaviors with custom logic. This library focuses particularly on enabling custom dequeue behavior, making it useful for scenarios where specialized queue processing is required.
 
 [![CI/CD](https://github.com/samsmithnz/CustomQueue/actions/workflows/dotnet.yml/badge.svg)](https://github.com/samsmithnz/CustomQueue/actions/workflows/dotnet.yml)
 [![Coverage Status](https://coveralls.io/repos/github/samsmithnz/CustomQueue/badge.svg?branch=main)](https://coveralls.io/github/samsmithnz/CustomQueue?branch=main)
